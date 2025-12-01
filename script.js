@@ -6,7 +6,7 @@ document.getElementById("voteForm").addEventListener("submit", function(e) {
 
     // Validation
     if (age === "" || name === "") {
-        alert("Please enter valid details.");
+        alert("Please enter valid details");   // ← FIXED HERE
         return;
     }
 
@@ -21,7 +21,7 @@ document.getElementById("voteForm").addEventListener("submit", function(e) {
         }, 4000);
     });
 
-    // Resolve / Reject Handling
+    // Handle resolve/reject
     checkAge
         .then(() => {
             alert(`Welcome, ${name}. You can vote.`);
